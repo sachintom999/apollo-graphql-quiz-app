@@ -1,0 +1,17 @@
+type Book {
+    title: String
+    author: String
+}
+
+type Query {
+    books: [Book]
+    getAllChallenges: [Challenge!]!
+    getChallenge(id: ID!): Challenge
+}
+
+type Challenge {
+    id: ID!
+    question: String!
+    answer: String!
+    options: [String!]!
+}
